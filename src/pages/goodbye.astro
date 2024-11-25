@@ -1,13 +1,17 @@
 ---
+import { getToken } from "@auth/core/jwt";
 import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
 import Icon from "../components/Icon.astro";
 import MainLayout from "../layout/MainLayout.astro";
+
+// const token = await getToken({ req: Astro.request, secret: import.meta.env.AUTH_SECRET });
+// console.log('token', token);
 ---
 
-<MainLayout title="Open Book" class="mx-8 2xl:mx-auto">
+<MainLayout title="Open Book" class="mx-8">
   <div class="flex flex-col gap-y-16">
-    <div class="mx-0">
+    <div>
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-6 lg:gap-x-6 mt-9">
         <div
           class="bg-[#191919] rounded-2xl py-10 px-8 col-span-2 bg-[url('/public/images/banner.avif')] bg-cover bg-[-30px] bg-no-repeat"
